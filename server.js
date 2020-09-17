@@ -26,14 +26,15 @@ app.use(cors())
 app.use(express.urlencoded({extended: false}))
 app.use(methodOverride('_method'))
 
-//Add routes
+//Add routes files
 app.use('/lists', require('./routes/lists'));
-// app.use('/items', require('/routes/items'));
+app.use('/items', require('./routes/items'));
 
+
+// home/error routes
 app.get('/', (req, res)=> {
     res.send('STUB HOME ROUTE')
 })
-
 
 
 

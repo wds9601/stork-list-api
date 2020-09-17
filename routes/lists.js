@@ -6,8 +6,9 @@ router.get('/', (req, res) => {
     res.send('GET ALL LISTS')
     db.List.findAll()
         .then(lists => {
-            // res.sendStatus(200);
-            console.log(lists);
+            lists.forEach(item => {
+                console.log(item.dataValues.name)
+            })
         })
         .catch(err => console.log('Error in get all lists', err))
 });
