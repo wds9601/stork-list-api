@@ -13,8 +13,8 @@
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const express = require('express');
-const methodOverride = require('method-override')
-const path = require('path');
+// const methodOverride = require('method-override')
+// const path = require('path');
 
 
 
@@ -24,7 +24,7 @@ const app = express();
 //Set up middleware
 app.use(cors())
 app.use(express.urlencoded({extended: false}))
-app.use(methodOverride('_method'))
+// app.use(methodOverride('_method'))
 
 //Add routes files
 app.use('/lists', require('./routes/lists'));
